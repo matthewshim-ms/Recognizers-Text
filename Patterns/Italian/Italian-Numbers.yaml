@@ -4,7 +4,7 @@ LangMarker: it
 RoundNumberIntegerRegex: !simpleRegex
   def: (cento|mille|milione|miliardo|trilione)
 ZeroToNineIntegerRegex: !simpleRegex
-  def: (tre|sette|otto|quattro|cinque|zero|nove|uno|due|sei)
+  def: (tre|sette|otto|quattro|cinque|zero|nove|uno|una|due|dui|sei)
 AnIntRegex: !simpleRegex
   def: (un|uno|una)(?=\s)
 TenToNineteenIntegerRegex: !simpleRegex
@@ -73,7 +73,7 @@ FractionNounWithArticleRegex: !nestedRegex
   def: (?<=\b)({AllIntRegex}\s+(e\s+)?)?(un|uno|una)(\s+|\s*-\s*)(({AllOrdinalRegex})|({RoundNumberOrdinalRegex})|mezzo|quarto)(?=\b)
   references: [ AllIntRegex, AllOrdinalRegex, RoundNumberOrdinalRegex ]
 FractionPrepositionRegex: !nestedRegex
-  def: (?<=\b)(({AllIntRegex})|((?<!\.)\d+))\s+over\s+(({AllIntRegex})|(\d+)(?!\.))(?=\b)
+  def: (?<=\b)(({AllIntRegex})|((?<!\.)\d+))\s+diviso\s+(({AllIntRegex})|(\d+)(?!\.))(?=\b)
   references: [ AllIntRegex ]
 #Double Regex
 AllPointRegex: !nestedRegex
@@ -127,134 +127,168 @@ DigitalNumberRegex: !simpleRegex
 CardinalNumberMap: !dictionary
   types: [ string, long ]
   entries:
-    a: 1
+    un: 1
+    una: 1
+    uno: 1
     zero: 0
-    an: 1
-    one: 1
-    two: 2
-    three: 3
-    four: 4
-    five: 5
-    six: 6
-    seven: 7
-    eight: 8
-    nine: 9
-    ten: 10
-    eleven: 11
-    twelve: 12
-    dozen: 12
-    dozens: 12
-    thirteen: 13
-    fourteen: 14
-    fifteen: 15
-    sixteen: 16
-    seventeen: 17
-    eighteen: 18
-    nineteen: 19
-    twenty: 20
-    thirty: 30
-    forty: 40
-    fifty: 50
-    sixty: 60
-    seventy: 70
-    eighty: 80
-    ninety: 90
-    hundred: 100
-    thousand: 1000
-    million: 1000000
-    billion: 1000000000
-    trillion: 1000000000000
+    uno: 1
+    due: 2
+    dui: 2
+    tre: 3
+    quattro: 4
+    cinque: 5
+    sei: 6
+    sette: 7
+    otto: 8
+    nove: 9
+    dieci: 10
+    undici: 11
+    dodici: 12
+    dozzina: 12
+    dozzine: 12
+    tredici: 13
+    quattordici: 14
+    quiundici: 15
+    sedici: 16
+    diciassette: 17
+    diciotto: 18
+    diciannove: 19
+    venti: 20
+    trenta: 30
+    quaranta: 40
+    cinquanta: 50
+    sessanta: 60
+    settanta: 70
+    ottanta: 80
+    novanta: 90
+    centinaio: 100
+    cento: 100
+    mille: 1000
+    milione: 1000000
+    miliardo: 1000000000
+    trilioni di: 1000000000000
+    trilioni: 1000000000000
 OrdinalNumberMap: !dictionary
   types: [ string, long ]
   entries:
-    first: 1
-    second: 2
-    secondary: 2
-    half: 2
-    third: 3
-    fourth: 4
-    quarter: 4
-    fifth: 5
-    sixth: 6
-    seventh: 7
-    eighth: 8
-    ninth: 9
-    tenth: 10
-    eleventh: 11
-    twelfth: 12
-    thirteenth: 13
-    fourteenth: 14
-    fifteenth: 15
-    sixteenth: 16
-    seventeenth: 17
-    eighteenth: 18
-    nineteenth: 19
-    twentieth: 20
-    thirtieth: 30
-    fortieth: 40
-    fiftieth: 50
-    sixtieth: 60
-    seventieth: 70
-    eightieth: 80
-    ninetieth: 90
-    hundredth: 100
-    thousandth: 1000
-    millionth: 1000000
-    billionth: 1000000000
-    trillionth: 1000000000000
-    firsts: 1
-    halves: 2
-    thirds: 3
-    fourths: 4
-    quarters: 4
-    fifths: 5
-    sixths: 6
-    sevenths: 7
-    eighths: 8
-    ninths: 9
-    tenths: 10
-    elevenths: 11
-    twelfths: 12
-    thirteenths: 13
-    fourteenths: 14
-    fifteenths: 15
-    sixteenths: 16
-    seventeenths: 17
-    eighteenths: 18
-    nineteenths: 19
-    twentieths: 20
-    thirtieths: 30
-    fortieths: 40
-    fiftieths: 50
-    sixtieths: 60
-    seventieths: 70
-    eightieths: 80
-    ninetieths: 90
-    hundredths: 100
-    thousandths: 1000
-    millionths: 1000000
-    billionths: 1000000000
-    trillionths: 1000000000000
+    primo: 1
+    secondo: 2
+    secondario: 2
+    meta: 2
+    metà: 2
+    mezzo: 2
+    terzo: 3
+    terza: 3
+    quarto: 4
+    quinto: 5
+    quinta: 5
+    sesto: 6
+    settimo: 7
+    ottavo: 8
+    nono: 9
+    nona: 9
+    decimo: 10
+    undicesimo: 11
+    dodicesimo: 12
+    tredicesimo: 13
+    quattordicesimo: 14
+    quindicesimo: 15
+    sedicesimo: 16
+    diciassettesimo: 17
+    diciottesimo: 18
+    diciannovesimo: 19
+    ventesimo: 20
+    trentesimo: 30
+    quarantesimo: 40
+    cinquantesimo: 50
+    sessantesimo: 60
+    settantesimo: 70
+    ottantesimo: 80
+    novantesimo: 90
+    centesimo: 100
+    millesimo: 1000
+    milionesimo: 1000000
+    bilionesimo: 1000000000
+    miliardesimo: 1000000000000
+    primi: 1
+    metà: 2
+    meta: 2
+    terzi: 3
+    terzo: 3
+    terza: 3
+    quarti: 4
+    quinti: 5
+    sesti: 6
+    settimi: 7
+    ottavi: 8
+    noni: 9
+    nona: 9
+    decimi: 10
+    undicesimi: 11
+    dodicesimi: 12
+    tredicesime: 13
+    quattordicesima: 14
+    quindicesima: 15
+    sedicesimi: 16
+    sedicesima: 16
+    diciassettesimi: 17
+    diciassettesima: 17
+    diciottesima: 18
+    diciottesimi: 18
+    diciannovesimi: 19
+    diciannovesima: 19
+    ventesima: 20
+    ventesimi: 20
+    trentesima: 30
+    trentesimi: 30
+    quarantesima: 40
+    quarantesimi: 40
+    cinquantesima: 50
+    cinquantesimi: 50
+    sessantesima: 60
+    sessantesimi: 60
+    settantesima: 70
+    settantesimi: 70
+    ottantesima: 80
+    ottantesimi: 80
+    novantesimi: 90
+    novantesima: 90
+    centesima: 100
+    millesima: 1000
+    millesimi: 1000
+    milionesima: 1000000
+    milionesimi: 1000000
+    bilionesima: 1000000000
+    bilionesimi: 1000000000
+    miliardesimi: 1000000000000
+    miliardesima: 1000000000000
 RoundNumberMap: !dictionary
   types: [ string, long ]
   entries:
-    hundred: 100
-    thousand: 1000
-    million: 1000000
-    billion: 1000000000
-    trillion: 1000000000000
-    hundredth: 100
-    thousandth: 1000
-    millionth: 1000000
-    billionth: 1000000000
-    trillionth: 1000000000000
-    hundredths: 100
+    centinaio: 100
+    cento: 100
+    mille: 1000
+    milione: 1000000
+    miliardo: 1000000000
+    bilione: 1000000000
+    trilioni di: 1000000000000
+    trilioni: 1000000000000
+    centesimo: 100
+    centesima: 100
+    millesimo: 1000
+    millesima: 1000
+    milionesimo: 1000000
+    milionesima: 1000000
+    bilionesimo: 1000000000
+    miliardesimo: 1000000000000
+    centesimo: 100
     thousandths: 1000
     millionths: 1000000
     billionths: 1000000000
     trillionths: 1000000000000
-    dozen: 12
-    dozens: 12
+    dozzina: 12
+    dozzine: 12
+    decine: 12
     k: 1000
     m: 1000000
     g: 1000000000

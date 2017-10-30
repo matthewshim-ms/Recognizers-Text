@@ -1,8 +1,8 @@
-﻿using System.Collections.Concurrent;
+﻿
+using Microsoft.Recognizers.Definitions.Italian;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Text.RegularExpressions;
-using Microsoft.Recognizers.Definitions.Italian;
 
 namespace Microsoft.Recognizers.Text.Number.Italian
 {
@@ -12,54 +12,38 @@ namespace Microsoft.Recognizers.Text.Number.Italian
 
         protected sealed override string ExtractType { get; } = Constants.SYS_NUM_FRACTION; // "Fraction";
 
-        private static readonly ConcurrentDictionary<string, FractionExtractor> Instances = new ConcurrentDictionary<string, FractionExtractor>();
-
-        public static FractionExtractor GetInstance(string placeholder = "")
-        {
-
-            if (!Instances.ContainsKey(placeholder))
-            {
-                var instance = new FractionExtractor();
-                Instances.TryAdd(placeholder, instance);
-            }
-
-            return Instances[placeholder];
-        }
-
-        private FractionExtractor()
+        public FractionExtractor()
         {
             var regexes = new Dictionary<Regex, string>
             {
-                {
-                    new Regex(NumbersDefinitions.FractionNotationWithSpacesRegex,
-                        RegexOptions.IgnoreCase | RegexOptions.Singleline)
-                    , "FracNum"
-                },
                 {
                     new Regex(NumbersDefinitions.FractionNotationRegex,
                         RegexOptions.IgnoreCase | RegexOptions.Singleline)
                     , "FracNum"
                 },
                 {
-                    new Regex(
-                        NumbersDefinitions.FractionNounRegex,
+                    new Regex(NumbersDefinitions.FractionNotationWithSpacesRegex,
                         RegexOptions.IgnoreCase | RegexOptions.Singleline)
-                    , "FracEng"
+                    , "FracNum"
                 },
                 {
-                    new Regex(
-                        NumbersDefinitions.FractionNounWithArticleRegex, RegexOptions.IgnoreCase | RegexOptions.Singleline)
-                    , "FracEng"
+                    new Regex(NumbersDefinitions.FractionNounRegex,
+                        RegexOptions.IgnoreCase | RegexOptions.Singleline)
+                    , "FracIt"
                 },
                 {
-                    new Regex(
-                        NumbersDefinitions.FractionPrepositionRegex,
+                    new Regex(NumbersDefinitions.FractionNounWithArticleRegex,
                         RegexOptions.IgnoreCase | RegexOptions.Singleline)
-                    , "FracEng"
-                }
+                    , "FracIt"
+                },
+                {
+                    new Regex(NumbersDefinitions.FractionPrepositionRegex,
+                        RegexOptions.IgnoreCase | RegexOptions.Singleline)
+                    , "FracIt"
+                },
             };
 
-            Regexes = regexes.ToImmutableDictionary();
+            this.Regexes = regexes.ToImmutableDictionary();
         }
     }
 }

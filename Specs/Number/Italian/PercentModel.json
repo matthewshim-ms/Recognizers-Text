@@ -27,11 +27,11 @@
 }
 ,
 {
-  "Input": " 100 percent",
+  "Input": " 100 percento",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "100 percent",
+      "Text": "100 percento",
       "TypeName": "percentage",
       "Resolution": {
         "value": "100%"
@@ -41,11 +41,11 @@
 }
 ,
 {
-  "Input": " 100 percentage",
+  "Input": " 100 per cento",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "100 percentage",
+      "Text": "100 per cento",
       "TypeName": "percentage",
       "Resolution": {
         "value": "100%"
@@ -55,11 +55,11 @@
 }
 ,
 {
-  "Input": "240 percent",
+  "Input": "240 percento",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "240 percent",
+      "Text": "240 percento",
       "TypeName": "percentage",
       "Resolution": {
         "value": "240%"
@@ -69,11 +69,11 @@
 }
 ,
 {
-  "Input": "twenty percent",
+  "Input": "venti percento",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "twenty percent",
+      "Text": "venti percento",
       "TypeName": "percentage",
       "Resolution": {
         "value": "20%"
@@ -83,11 +83,11 @@
 }
 ,
 {
-  "Input": "thirty percentage",
+  "Input": "trenta per cento",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "thirty percentage",
+      "Text": "trenta per cento",
       "TypeName": "percentage",
       "Resolution": {
         "value": "30%"
@@ -97,11 +97,11 @@
 }
 ,
 {
-  "Input": "one hundred percent",
+  "Input": "uno cento percento",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one hundred percent",
+      "Text": "uno cento percento",
       "TypeName": "percentage",
       "Resolution": {
         "value": "100%"
@@ -111,11 +111,11 @@
 }
 ,
 {
-  "Input": "one hundred percents",
+  "Input": "una cento percento",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one hundred percents",
+      "Text": "una cento percento",
       "TypeName": "percentage",
       "Resolution": {
         "value": "100%"
@@ -125,11 +125,11 @@
 }
 ,
 {
-  "Input": "percents of twenty",
+  "Input": "percento di venti",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "percents of twenty",
+      "Text": "percento di venti",
       "TypeName": "percentage",
       "Resolution": {
         "value": "20%"
@@ -139,11 +139,11 @@
 }
 ,
 {
-  "Input": "percent of 10",
+  "Input": "percento di 10",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "percent of 10",
+      "Text": "percento di 10",
       "TypeName": "percentage",
       "Resolution": {
         "value": "10%"
@@ -153,11 +153,11 @@
 }
 ,
 {
-  "Input": "per cent of twenty-two",
+  "Input": "per cento di ventidui",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "per cent of twenty-two",
+      "Text": "per cento di ventidui",
       "TypeName": "percentage",
       "Resolution": {
         "value": "22%"
@@ -167,11 +167,11 @@
 }
 ,
 {
-  "Input": "per cent of 210",
+  "Input": "percento di 210",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "per cent of 210",
+      "Text": "percento di 210",
       "TypeName": "percentage",
       "Resolution": {
         "value": "210%"
@@ -181,11 +181,11 @@
 }
 ,
 {
-  "Input": "10 percent",
+  "Input": "10 per cento",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "10 percent",
+      "Text": "10 per cento",
       "TypeName": "percentage",
       "Resolution": {
         "value": "10%"

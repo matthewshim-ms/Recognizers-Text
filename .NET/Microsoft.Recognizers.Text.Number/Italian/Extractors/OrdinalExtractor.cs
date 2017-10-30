@@ -1,8 +1,7 @@
-﻿using System.Collections.Concurrent;
+﻿using Microsoft.Recognizers.Definitions.Italian;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Text.RegularExpressions;
-using Microsoft.Recognizers.Definitions.Italian;
 
 namespace Microsoft.Recognizers.Text.Number.Italian
 {
@@ -12,43 +11,44 @@ namespace Microsoft.Recognizers.Text.Number.Italian
 
         protected sealed override string ExtractType { get; } = Constants.SYS_NUM_ORDINAL; // "Ordinal";
 
-        private static readonly ConcurrentDictionary<string, OrdinalExtractor> Instances = new ConcurrentDictionary<string, OrdinalExtractor>();
-
-        public static OrdinalExtractor GetInstance(string placeholder = "")
-        {
-
-            if (!Instances.ContainsKey(placeholder))
-            {
-                var instance = new OrdinalExtractor();
-                Instances.TryAdd(placeholder, instance);
-            }
-
-            return Instances[placeholder];
-        }
-
-        private OrdinalExtractor()
+        public OrdinalExtractor()
         {
             var regexes = new Dictionary<Regex, string>
             {
                 {
-                    new Regex(NumbersDefinitions.OrdinalSuffixRegex, RegexOptions.IgnoreCase | RegexOptions.Singleline),
-                    "OrdinalNum"
+                    new Regex(
+                        NumbersDefinitions.OrdinalSuffixRegex,
+                        RegexOptions.IgnoreCase | RegexOptions.Singleline)
+                    , "OrdinalNum"
                 },
                 {
-                    new Regex(NumbersDefinitions.OrdinalNumericRegex, RegexOptions.IgnoreCase | RegexOptions.Singleline),
-                    "OrdinalNum"
+                    new Regex(NumbersDefinitions.BasicOrdinalRegex,
+                        RegexOptions.IgnoreCase | RegexOptions.Singleline)
+                    , "OrdinalIt"
                 },
                 {
-                    new Regex(NumbersDefinitions.OrdinalEnglishRegex, RegexOptions.IgnoreCase | RegexOptions.Singleline),
-                    "OrdEng"
+                    new Regex(NumbersDefinitions.OrdinalNumericRegex,
+                        RegexOptions.IgnoreCase | RegexOptions.Singleline)
+                    , "OrdinalNum"
                 },
                 {
-                    new Regex(NumbersDefinitions.OrdinalRoundNumberRegex, RegexOptions.IgnoreCase | RegexOptions.Singleline),
-                    "OrdEng"
+                    new Regex(NumbersDefinitions.SuffixBasicOrdinalRegex,
+                        RegexOptions.IgnoreCase | RegexOptions.Singleline)
+                    , "OrdinalIt"
+                },
+                {
+                    new Regex(NumbersDefinitions.SuffixRoundNumberOrdinalRegex,
+                        RegexOptions.IgnoreCase | RegexOptions.Singleline)
+                    , "OrdinalIt"
+                },
+                                {
+                    new Regex(NumbersDefinitions.AllOrdinalRegex,
+                        RegexOptions.IgnoreCase | RegexOptions.Singleline)
+                    , "OrdinalIt"
                 }
             };
 
-            Regexes = regexes.ToImmutableDictionary();
+            this.Regexes = regexes.ToImmutableDictionary();
         }
     }
 }

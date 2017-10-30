@@ -5,6 +5,7 @@ using Microsoft.Recognizers.Text.Number.English;
 using Microsoft.Recognizers.Text.Number.French;
 using Microsoft.Recognizers.Text.Number.Portuguese;
 using Microsoft.Recognizers.Text.Number.Spanish;
+using Microsoft.Recognizers.Text.Number.Italian;
 
 namespace Microsoft.Recognizers.Text.Number
 {
@@ -78,6 +79,19 @@ namespace Microsoft.Recognizers.Text.Number
                             AgnosticNumberParserFactory.GetParser(AgnosticNumberParserType.Percentage, new FrenchNumberParserConfiguration()),
                             new French.PercentageExtractor())
             });
+
+            RegisterModel(Culture.Italian, new Dictionary<Type, IModel>
+            {
+                [typeof(NumberModel)] = new NumberModel(
+                        AgnosticNumberParserFactory.GetParser(AgnosticNumberParserType.Number, new ItalianNumberParserConfiguration()),
+                        new Italian.NumberExtractor(NumberMode.PureNumber)),
+                [typeof(OrdinalModel)] = new OrdinalModel(
+                        AgnosticNumberParserFactory.GetParser(AgnosticNumberParserType.Ordinal, new ItalianNumberParserConfiguration()),
+                        new Italian.OrdinalExtractor()),
+                [typeof(PercentModel)] = new PercentModel(
+                        AgnosticNumberParserFactory.GetParser(AgnosticNumberParserType.Percentage, new ItalianNumberParserConfiguration()),
+                        new Italian.PercentageExtractor())
+            });              
         }
 
         public IModel GetNumberModel(string culture, bool fallbackToDefaultCulture = true)

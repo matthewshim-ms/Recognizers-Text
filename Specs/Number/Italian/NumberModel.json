@@ -48,31 +48,31 @@
 }
 ,
 {
-  "Input": "the 180.25ml liquid",
+  "Input": "il 180.25ml liquido",
   "NotSupportedByDesign": "python",
   "Results": []
 }
 ,
 {
-  "Input": "the 180ml liquid",
+  "Input": "il 180 ml liquido",
   "NotSupportedByDesign": "python",
   "Results": []
 }
 ,
 {
-  "Input": " 29km Road ",
+  "Input": " 29km strada ",
   "NotSupportedByDesign": "python",
   "Results": []
 }
 ,
 {
-  "Input": " the May 4th ",
+  "Input": " L'il 4 maggio ",
   "NotSupportedByDesign": "python",
   "Results": []
 }
 ,
 {
-  "Input": "the .25ml liquid",
+  "Input": "Il .25ml liquido",
   "NotSupportedByDesign": "python",
   "Results": []
 }
@@ -98,7 +98,7 @@
 }
 ,
 {
-  "Input": "a",
+  "Input": "un",
   "NotSupportedByDesign": "python",
   "Results": []
 }
@@ -132,11 +132,11 @@
 }
 ,
 {
-  "Input": "one hundred and three and two thirds",
+  "Input": "cento e tre e due terzo",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one hundred and three and two thirds",
+      "Text": "cento e tre e due terzo",
       "TypeName": "number",
       "Resolution": {
         "value": "103.666666666667"
@@ -146,7 +146,7 @@
 }
 ,
 {
-  "Input": "sixteen",
+  "Input": "sedici",
   "NotSupportedByDesign": "python",
   "Results": [
     {
@@ -160,11 +160,11 @@
 }
 ,
 {
-  "Input": "two thirds",
+  "Input": "due terzi",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "two thirds",
+      "Text": "due terzi",
       "TypeName": "number",
       "Resolution": {
         "value": "0.666666666666667"
@@ -174,11 +174,11 @@
 }
 ,
 {
-  "Input": "one hundred and sixteen",
+  "Input": "cento e sedici",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one hundred and sixteen",
+      "Text": "cento e sedici",
       "TypeName": "number",
       "Resolution": {
         "value": "116"
@@ -188,11 +188,11 @@
 }
 ,
 {
-  "Input": "one hundred and six",
+  "Input": "cento e sei",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one hundred and six",
+      "Text": "cento e sei",
       "TypeName": "number",
       "Resolution": {
         "value": "106"
@@ -202,11 +202,11 @@
 }
 ,
 {
-  "Input": "one hundred and sixty-one",
+  "Input": "cento e sei-uno",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one hundred and sixty-one",
+      "Text": "cento e sei-uno",
       "TypeName": "number",
       "Resolution": {
         "value": "161"
@@ -216,11 +216,11 @@
 }
 ,
 {
-  "Input": "a trillionth",
+  "Input": "un bilionesimo",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "a trillionth",
+      "Text": "un bilionesimo",
       "TypeName": "number",
       "Resolution": {
         "value": "1E-12"
@@ -230,11 +230,11 @@
 }
 ,
 {
-  "Input": "a hundred trillionths",
+  "Input": "cento bilionesimo",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "a hundred trillionths",
+      "Text": "cento bilionesimo",
       "TypeName": "number",
       "Resolution": {
         "value": "1E-10"
@@ -244,11 +244,11 @@
 }
 ,
 {
-  "Input": " half a  dozen",
+  "Input": " una dozzina di",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "half a  dozen",
+      "Text": "una dozzina di",
       "TypeName": "number",
       "Resolution": {
         "value": "6"
@@ -258,11 +258,25 @@
 }
 ,
 {
-  "Input": " 3 dozens",
+  "Input": " mezza dozzina",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "3 dozens",
+      "Text": "mezza dozzina",
+      "TypeName": "number",
+      "Resolution": {
+        "value": "6"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": " 3 dozzine",
+  "NotSupportedByDesign": "python",
+  "Results": [
+    {
+      "Text": "3 dozzine",
       "TypeName": "number",
       "Resolution": {
         "value": "36"
@@ -272,11 +286,11 @@
 }
 ,
 {
-  "Input": "a dozen",
+  "Input": "una dozzina di",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "a dozen",
+      "Text": "una dozzina di",
       "TypeName": "number",
       "Resolution": {
         "value": "12"
@@ -286,11 +300,11 @@
 }
 ,
 {
-  "Input": " three dozens ",
+  "Input": " tre dozzine ",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "three dozens",
+      "Text": "tre dozzine",
       "TypeName": "number",
       "Resolution": {
         "value": "36"
@@ -300,11 +314,11 @@
 }
 ,
 {
-  "Input": " three hundred and two dozens",
+  "Input": " trecento e due dozzine",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "three hundred and two dozens",
+      "Text": "trecento e due dozzine",
       "TypeName": "number",
       "Resolution": {
         "value": "324"
@@ -426,11 +440,11 @@
 }
 ,
 {
-  "Input": "three",
+  "Input": "tre",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "three",
+      "Text": "tre",
       "TypeName": "number",
       "Resolution": {
         "value": "3"
@@ -538,11 +552,11 @@
 }
 ,
 {
-  "Input": "2 million",
+  "Input": "2 milioni",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "2 million",
+      "Text": "2 milioni",
       "TypeName": "number",
       "Resolution": {
         "value": "2000000"
@@ -552,11 +566,11 @@
 }
 ,
 {
-  "Input": "1 trillion",
+  "Input": "1 bilioni",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "1 trillion",
+      "Text": "1 bilioni",
       "TypeName": "number",
       "Resolution": {
         "value": "1000000000000"
@@ -566,11 +580,11 @@
 }
 ,
 {
-  "Input": " three ",
+  "Input": " tre ",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "three",
+      "Text": "tre",
       "TypeName": "number",
       "Resolution": {
         "value": "3"
@@ -580,11 +594,11 @@
 }
 ,
 {
-  "Input": "one trillion",
+  "Input": "un trilione di",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one trillion",
+      "Text": "un trilione di",
       "TypeName": "number",
       "Resolution": {
         "value": "1000000000000"
@@ -594,11 +608,11 @@
 }
 ,
 {
-  "Input": "twenty-one trillion",
+  "Input": "ventuno bilioni",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "twenty-one trillion",
+      "Text": "ventuno bilioni",
       "TypeName": "number",
       "Resolution": {
         "value": "21000000000000"
@@ -608,11 +622,11 @@
 }
 ,
 {
-  "Input": "twenty-one trillion three hundred",
+  "Input": "ventuno bilione trecento",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "twenty-one trillion three hundred",
+      "Text": "ventuno bilione trecento",
       "TypeName": "number",
       "Resolution": {
         "value": "21000000000300"
@@ -622,11 +636,11 @@
 }
 ,
 {
-  "Input": "twenty-one trillion and three hundred",
+  "Input": "ventuno bilioni e trecento",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "twenty-one trillion and three hundred",
+      "Text": "ventuno bilioni e trecento",
       "TypeName": "number",
       "Resolution": {
         "value": "21000000000300"
@@ -636,11 +650,11 @@
 }
 ,
 {
-  "Input": "fifty - two",
+  "Input": "cinquanta - due",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "fifty - two",
+      "Text": "cinquanta - due",
       "TypeName": "number",
       "Resolution": {
         "value": "52"
@@ -650,11 +664,11 @@
 }
 ,
 {
-  "Input": "fifty   two",
+  "Input": "cinquanta   due",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "fifty   two",
+      "Text": "cinquanta   due",
       "TypeName": "number",
       "Resolution": {
         "value": "52"
@@ -664,11 +678,11 @@
 }
 ,
 {
-  "Input": "Three hundred  and  thirty one",
+  "Input": "Trecento e trenta uno",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "Three hundred  and  thirty one",
+      "Text": "Trecento e trenta uno",
       "TypeName": "number",
       "Resolution": {
         "value": "331"
@@ -678,11 +692,11 @@
 }
 ,
 {
-  "Input": "two hundred and two thousand",
+  "Input": "duecento e due mille",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "two hundred and two thousand",
+      "Text": "duecento e due mille",
       "TypeName": "number",
       "Resolution": {
         "value": "202000"
@@ -692,11 +706,11 @@
 }
 ,
 {
-  "Input": "two  thousand  and  two hundred",
+  "Input": "due  mille  e  due cento",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "two  thousand  and  two hundred",
+      "Text": "due  mille  e  due cento",
       "TypeName": "number",
       "Resolution": {
         "value": "2200"
@@ -720,11 +734,11 @@
 }
 ,
 {
-  "Input": " two hundred point zero three",
+  "Input": " duecento punto zero tre",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "two hundred point zero three",
+      "Text": "duecento punto zero tre",
       "TypeName": "number",
       "Resolution": {
         "value": "200.03"
@@ -734,11 +748,11 @@
 }
 ,
 {
-  "Input": " two hundred point seventy-one",
+  "Input": " duecento punto settantuno",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "two hundred point seventy-one",
+      "Text": "duecento punto settantuno",
       "TypeName": "number",
       "Resolution": {
         "value": "200.71"
@@ -776,11 +790,11 @@
 }
 ,
 {
-  "Input": " 322 hundred ",
+  "Input": " 322 cento ",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "322 hundred",
+      "Text": "322 cento",
       "TypeName": "number",
       "Resolution": {
         "value": "32200"
@@ -790,11 +804,11 @@
 }
 ,
 {
-  "Input": "seventy",
+  "Input": "settanta",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "seventy",
+      "Text": "settanta",
       "TypeName": "number",
       "Resolution": {
         "value": "70"
@@ -804,11 +818,11 @@
 }
 ,
 {
-  "Input": "fifty-two",
+  "Input": "cinquantadue",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "fifty-two",
+      "Text": "cinquantadue",
       "TypeName": "number",
       "Resolution": {
         "value": "52"
@@ -846,11 +860,11 @@
 }
 ,
 {
-  "Input": "one eighth",
+  "Input": "un 8esimo",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one eighth",
+      "Text": "un 8esimo",
       "TypeName": "number",
       "Resolution": {
         "value": "0.125"
@@ -860,11 +874,11 @@
 }
 ,
 {
-  "Input": "five eighths",
+  "Input": "cinque ottavo",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "five eighths",
+      "Text": "cinque ottavo",
       "TypeName": "number",
       "Resolution": {
         "value": "0.625"
@@ -874,11 +888,11 @@
 }
 ,
 {
-  "Input": "a half",
+  "Input": "mezzo",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "a half",
+      "Text": "mezzo",
       "TypeName": "number",
       "Resolution": {
         "value": "0.5"
@@ -888,11 +902,11 @@
 }
 ,
 {
-  "Input": "three quarters",
+  "Input": "tre quarti",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "three quarters",
+      "Text": "tre quarti",
       "TypeName": "number",
       "Resolution": {
         "value": "0.75"
@@ -902,11 +916,11 @@
 }
 ,
 {
-  "Input": "twenty and three fifths",
+  "Input": "venti e tre quinto",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "twenty and three fifths",
+      "Text": "venti e tre quinto",
       "TypeName": "number",
       "Resolution": {
         "value": "20.6"
@@ -916,11 +930,11 @@
 }
 ,
 {
-  "Input": "twenty-three fifths",
+  "Input": "ventitrè quinto",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "twenty-three fifths",
+      "Text": "ventitrè quinto",
       "TypeName": "number",
       "Resolution": {
         "value": "4.6"
@@ -930,11 +944,11 @@
 }
 ,
 {
-  "Input": "twenty and three and three fifths",
+  "Input": "venti e tre e tre quinto",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "twenty and three and three fifths",
+      "Text": "venti e tre e tre quinto",
       "TypeName": "number",
       "Resolution": {
         "value": "23.6"
@@ -944,11 +958,11 @@
 }
 ,
 {
-  "Input": "one million two thousand two hundred three fifths",
+  "Input": "uno milione due mille duecento tre quinto",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one million two thousand two hundred three fifths",
+      "Text": "uno milione due mille duecento tre quinto",
       "TypeName": "number",
       "Resolution": {
         "value": "200440.6"
@@ -958,11 +972,11 @@
 }
 ,
 {
-  "Input": "one and a half",
+  "Input": "uno e mezzo",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one and a half",
+      "Text": "uno e mezzo",
       "TypeName": "number",
       "Resolution": {
         "value": "1.5"
@@ -972,11 +986,11 @@
 }
 ,
 {
-  "Input": "one and a fourth",
+  "Input": "uno e un quarto",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one and a fourth",
+      "Text": "uo e un quarto",
       "TypeName": "number",
       "Resolution": {
         "value": "1.25"
@@ -986,11 +1000,11 @@
 }
 ,
 {
-  "Input": "five and a quarter",
+  "Input": "cinque e un quarto",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "five and a quarter",
+      "Text": "cinque e un quarto",
       "TypeName": "number",
       "Resolution": {
         "value": "5.25"
@@ -1000,11 +1014,11 @@
 }
 ,
 {
-  "Input": "one hundred and three quarters",
+  "Input": "cento e tre quarti",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one hundred and three quarters",
+      "Text": "cento e tre quarti",
       "TypeName": "number",
       "Resolution": {
         "value": "100.75"
@@ -1014,11 +1028,11 @@
 }
 ,
 {
-  "Input": "a hundredth",
+  "Input": "un centesimo",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "a hundredth",
+      "Text": "un centesimo",
       "TypeName": "number",
       "Resolution": {
         "value": "0.01"
@@ -1168,11 +1182,11 @@
 }
 ,
 {
-  "Input": "a fifth",
+  "Input": "un quinto",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "a fifth",
+      "Text": "un quinto",
       "TypeName": "number",
       "Resolution": {
         "value": "0.2"
@@ -1182,11 +1196,11 @@
 }
 ,
 {
-  "Input": "a hundred thousand trillionths",
+  "Input": "cento mille bilionesimo",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "a hundred thousand trillionths",
+      "Text": "cento mille bilionesimo",
       "TypeName": "number",
       "Resolution": {
         "value": "1E-07"
@@ -1196,11 +1210,11 @@
 }
 ,
 {
-  "Input": "one fifth",
+  "Input": "un quinto",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one fifth",
+      "Text": "un quinto",
       "TypeName": "number",
       "Resolution": {
         "value": "0.2"
@@ -1210,11 +1224,11 @@
 }
 ,
 {
-  "Input": "three fifths",
+  "Input": "tre quinto",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "three fifths",
+      "Text": "tre quinto",
       "TypeName": "number",
       "Resolution": {
         "value": "0.6"
@@ -1224,11 +1238,11 @@
 }
 ,
 {
-  "Input": "twenty fifths",
+  "Input": "venti quinto",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "twenty fifths",
+      "Text": "venti quinto",
       "TypeName": "number",
       "Resolution": {
         "value": "4"
@@ -1238,11 +1252,11 @@
 }
 ,
 {
-  "Input": "three and a fifth",
+  "Input": "tre ed un quinto",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "three and a fifth",
+      "Text": "tre ed un quinto",
       "TypeName": "number",
       "Resolution": {
         "value": "3.2"
@@ -1252,11 +1266,11 @@
 }
 ,
 {
-  "Input": "twenty one fifths",
+  "Input": "venti uno quinto",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "twenty one fifths",
+      "Text": "venti uno quinto",
       "TypeName": "number",
       "Resolution": {
         "value": "4.2"
@@ -1266,11 +1280,11 @@
 }
 ,
 {
-  "Input": "a twenty-first",
+  "Input": "un ventunesimo",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "a twenty-first",
+      "Text": "un ventunesimo",
       "TypeName": "number",
       "Resolution": {
         "value": "0.0476190476190476"
@@ -1280,11 +1294,11 @@
 }
 ,
 {
-  "Input": "one twenty-fifth",
+  "Input": "uno venti-quinto",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one twenty-fifth",
+      "Text": "uno venti-quinto",
       "TypeName": "number",
       "Resolution": {
         "value": "0.04"
@@ -1294,11 +1308,11 @@
 }
 ,
 {
-  "Input": "three twenty-firsts",
+  "Input": "tre ventunesimo",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "three twenty-firsts",
+      "Text": "tre ventunesimo",
       "TypeName": "number",
       "Resolution": {
         "value": "0.142857142857143"
@@ -1308,11 +1322,11 @@
 }
 ,
 {
-  "Input": "three twenty firsts",
+  "Input": "tre venti primo",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "three twenty firsts",
+      "Text": "tre venti primo",
       "TypeName": "number",
       "Resolution": {
         "value": "0.142857142857143"
@@ -1322,11 +1336,11 @@
 }
 ,
 {
-  "Input": "twenty twenty fifths",
+  "Input": "venti venti quinto",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "twenty twenty fifths",
+      "Text": "venti venti quinto",
       "TypeName": "number",
       "Resolution": {
         "value": "0.8"
@@ -1336,11 +1350,11 @@
 }
 ,
 {
-  "Input": "one hundred and thirty fifths",
+  "Input": "cento e trenta quinto",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one hundred and thirty fifths",
+      "Text": "cento e trenta quinto",
       "TypeName": "number",
       "Resolution": {
         "value": "26"
@@ -1350,11 +1364,11 @@
 }
 ,
 {
-  "Input": "one hundred thirty fifths",
+  "Input": "cento trenta quinto",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one hundred thirty fifths",
+      "Text": "cento trenta quinto",
       "TypeName": "number",
       "Resolution": {
         "value": "2.85714285714286"
@@ -1364,11 +1378,11 @@
 }
 ,
 {
-  "Input": "one hundred thirty two fifths",
+  "Input": "cento trenta due quinto",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one hundred thirty two fifths",
+      "Text": "cento trenta due quinto",
       "TypeName": "number",
       "Resolution": {
         "value": "26.4"
@@ -1378,11 +1392,11 @@
 }
 ,
 {
-  "Input": "one hundred thirty-two fifths",
+  "Input": "cento trentadui quinto",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one hundred thirty-two fifths",
+      "Text": "cento trentadui quinto",
       "TypeName": "number",
       "Resolution": {
         "value": "26.4"
@@ -1392,11 +1406,11 @@
 }
 ,
 {
-  "Input": "one hundred and thirty-two fifths",
+  "Input": "cento e trentadui quinto",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one hundred and thirty-two fifths",
+      "Text": "cento e trentadui quinto",
       "TypeName": "number",
       "Resolution": {
         "value": "26.4"
@@ -1406,11 +1420,11 @@
 }
 ,
 {
-  "Input": "one hundred and thirty and two fifths",
+  "Input": "cento e trenta e due quinto",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one hundred and thirty and two fifths",
+      "Text": "cento e trenta e due quinto",
       "TypeName": "number",
       "Resolution": {
         "value": "130.4"
@@ -1420,11 +1434,11 @@
 }
 ,
 {
-  "Input": "one hundred thirty-fifths",
+  "Input": "cento trenta-quinto",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one hundred thirty-fifths",
+      "Text": "cento trenta-quinto",
       "TypeName": "number",
       "Resolution": {
         "value": "2.85714285714286"
@@ -1434,11 +1448,11 @@
 }
 ,
 {
-  "Input": "one one hundred fifth",
+  "Input": "un cento quinto",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one one hundred fifth",
+      "Text": "un cento quinto",
       "TypeName": "number",
       "Resolution": {
         "value": "0.00952380952380952"
@@ -1448,11 +1462,11 @@
 }
 ,
 {
-  "Input": "one one hundred and fifth",
+  "Input": "uno cento e quinto",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one one hundred and fifth",
+      "Text": "uno cento e quinto",
       "TypeName": "number",
       "Resolution": {
         "value": "0.00952380952380952"
@@ -1462,11 +1476,11 @@
 }
 ,
 {
-  "Input": "one hundred one thousand fifths",
+  "Input": "cento milli quinto",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one hundred one thousand fifths",
+      "Text": "cento milli quinto",
       "TypeName": "number",
       "Resolution": {
         "value": "0.0995024875621891"
@@ -1476,11 +1490,11 @@
 }
 ,
 {
-  "Input": "one over three",
+  "Input": "uno più di tre",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one over three",
+      "Text": "uno diviso tre",
       "TypeName": "number",
       "Resolution": {
         "value": "0.333333333333333"
@@ -1490,11 +1504,11 @@
 }
 ,
 {
-  "Input": "1 over twenty-one",
+  "Input": "uno diviso ventuno",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "1 over twenty-one",
+      "Text": "uno più di ventuno",
       "TypeName": "number",
       "Resolution": {
         "value": "0.0476190476190476"
@@ -1504,11 +1518,11 @@
 }
 ,
 {
-  "Input": "1 over one hundred and twenty one",
+  "Input": "1 su cento e venti uno",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "1 over one hundred and twenty one",
+      "Text": "1 su cento e venti uno",
       "TypeName": "number",
       "Resolution": {
         "value": "0.00826446280991736"
@@ -1518,7 +1532,7 @@
 }
 ,
 {
-  "Input": "1 over three",
+  "Input": "1 diviso tre",
   "NotSupportedByDesign": "python",
   "Results": [
     {
@@ -1532,11 +1546,11 @@
 }
 ,
 {
-  "Input": "1 over 3",
+  "Input": "1 diviso 3",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "1 over 3",
+      "Text": "1 diviso 3",
       "TypeName": "number",
       "Resolution": {
         "value": "0.333333333333333"
@@ -1546,11 +1560,11 @@
 }
 ,
 {
-  "Input": "one over 3",
+  "Input": "uno diviso 3",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one over 3",
+      "Text": "uno diviso 3",
       "TypeName": "number",
       "Resolution": {
         "value": "0.333333333333333"
@@ -1560,11 +1574,11 @@
 }
 ,
 {
-  "Input": "one over 20",
+  "Input": "uno diviso 20",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one over 20",
+      "Text": "uno diviso 20",
       "TypeName": "number",
       "Resolution": {
         "value": "0.05"
@@ -1574,11 +1588,11 @@
 }
 ,
 {
-  "Input": "one over twenty",
+  "Input": "una diviso venti",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one over twenty",
+      "Text": "una diviso venti",
       "TypeName": "number",
       "Resolution": {
         "value": "0.05"
@@ -1588,11 +1602,11 @@
 }
 ,
 {
-  "Input": "one over one hundred",
+  "Input": "uno diviso una cento",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one over one hundred",
+      "Text": "uno diviso una cento",
       "TypeName": "number",
       "Resolution": {
         "value": "0.01"
@@ -1602,11 +1616,11 @@
 }
 ,
 {
-  "Input": "one over one hundred and twenty five",
+  "Input": "uno diviso una cento e vinticinque",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "one over one hundred and twenty five",
+      "Text": "uno diviso una cento e vinticinque",
       "TypeName": "number",
       "Resolution": {
         "value": "0.008"
@@ -1616,11 +1630,11 @@
 }
 ,
 {
-  "Input": "ninety - five hundred fifths",
+  "Input": "novanta - cinquecento quinti",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "ninety - five hundred fifths",
+      "Text": "novanta - cinquecento quinti",
       "TypeName": "number",
       "Resolution": {
         "value": "1900"

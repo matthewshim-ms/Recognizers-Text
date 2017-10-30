@@ -7,14 +7,14 @@ namespace Microsoft.Recognizers.Text.Number.Italian
 {
     public sealed class PercentageExtractor : BasePercentageExtractor
     {
-        public PercentageExtractor() : base(new NumberExtractor()) { }
+        public PercentageExtractor() : base(NumberExtractor.GetInstance()) { }
 
         protected override ImmutableHashSet<Regex> InitRegexes()
         {
             HashSet<string> regexStrs = new HashSet<string>
             {
-                NumbersDefinitions.NumberWithPrefixPercentage,
-                NumbersDefinitions.NumberWithSuffixPercentage
+                NumbersDefinitions.NumberWithSuffixPercentage,
+                NumbersDefinitions.NumberWithPrefixPercentage
             };
 
             return BuildRegexes(regexStrs);

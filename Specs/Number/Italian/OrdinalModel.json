@@ -1,9 +1,9 @@
 [{
-  "Input": "three trillionth",
+  "Input": "tre trilionesimo",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "three trillionth",
+      "Text": "tre trilionesimo",
       "TypeName": "ordinal",
       "Resolution": {
         "value": "3000000000000"
