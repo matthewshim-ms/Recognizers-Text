@@ -42,10 +42,10 @@ namespace Microsoft.Recognizers.Text.Number.Italian
                               RegexOptions.IgnoreCase | RegexOptions.Singleline), "IntegerNum"
                 }, {
                     new Regex(NumbersDefinitions.AllIntRegexWithLocks,
-                              RegexOptions.IgnoreCase | RegexOptions.Singleline), "IntegerEng"
+                              RegexOptions.IgnoreCase | RegexOptions.Singleline), "IntegerIT"
                 }, {
                     new Regex(NumbersDefinitions.AllIntRegexWithDozenSuffixLocks,
-                              RegexOptions.IgnoreCase | RegexOptions.Singleline), "IntegerEng"
+                              RegexOptions.IgnoreCase | RegexOptions.Singleline), "IntegerIT"
                 }, {
                     GenerateLongFormatNumberRegexes(LongFormatType.IntegerNumComma, placeholder), "IntegerNum"
                 }

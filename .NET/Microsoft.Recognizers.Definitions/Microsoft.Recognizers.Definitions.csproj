@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Microsoft.Recognizers.Definitions</RootNamespace>
     <AssemblyName>Microsoft.Recognizers.Definitions</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -96,6 +96,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>NumbersWithUnitDefinitions.tt</DependentUpon>
     </Compile>
+    <Compile Include="Italian\NumberDefinitions.cs">
+      <DependentUpon>NumberDefinitions.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Portuguese\NumbersDefinitions.cs">
       <DependentUpon>NumbersDefinitions.tt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -167,6 +172,10 @@
     <Content Include="French\NumbersWithUnitDefinitions.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>NumbersWithUnitDefinitions.cs</LastGenOutput>
+    </Content>
+    <Content Include="Italian\NumberDefinitions.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>NumberDefinitions.cs</LastGenOutput>
     </Content>
     <Content Include="Spanish\DateTimeDefinitions.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

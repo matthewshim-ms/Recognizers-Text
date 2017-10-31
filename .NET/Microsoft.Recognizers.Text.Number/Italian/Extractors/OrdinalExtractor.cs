@@ -22,29 +22,9 @@ namespace Microsoft.Recognizers.Text.Number.Italian
                     , "OrdinalNum"
                 },
                 {
-                    new Regex(NumbersDefinitions.BasicOrdinalRegex,
+                    new Regex(NumbersDefinitions.OrdinalNounRegex,
                         RegexOptions.IgnoreCase | RegexOptions.Singleline)
-                    , "OrdinalIt"
-                },
-                {
-                    new Regex(NumbersDefinitions.OrdinalNumericRegex,
-                        RegexOptions.IgnoreCase | RegexOptions.Singleline)
-                    , "OrdinalNum"
-                },
-                {
-                    new Regex(NumbersDefinitions.SuffixBasicOrdinalRegex,
-                        RegexOptions.IgnoreCase | RegexOptions.Singleline)
-                    , "OrdinalIt"
-                },
-                {
-                    new Regex(NumbersDefinitions.SuffixRoundNumberOrdinalRegex,
-                        RegexOptions.IgnoreCase | RegexOptions.Singleline)
-                    , "OrdinalIt"
-                },
-                                {
-                    new Regex(NumbersDefinitions.AllOrdinalRegex,
-                        RegexOptions.IgnoreCase | RegexOptions.Singleline)
-                    , "OrdinalIt"
+                    , "OrdinalIT"
                 }
             };
 

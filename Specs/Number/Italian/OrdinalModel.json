@@ -1,9 +1,9 @@
 [{
-  "Input": "tremilionesimo",
+  "Input": "tre milionesimo",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "tremilionesimo",
+      "Text": "tre milionesimo",
       "TypeName": "ordinal",
       "Resolution": {
         "value": "3000000"

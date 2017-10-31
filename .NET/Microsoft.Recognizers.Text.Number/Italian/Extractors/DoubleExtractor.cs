@@ -45,7 +45,7 @@ namespace Microsoft.Recognizers.Text.Number.Italian
                     "DoubleNum"
                 }, {
                     new Regex(NumbersDefinitions.DoubleAllFloatRegex, RegexOptions.IgnoreCase | RegexOptions.Singleline),
-                    "DoubleEng"
+                    "DoubleIT"
                 }, {
                     new Regex(NumbersDefinitions.DoubleExponentialNotationRegex,
                               RegexOptions.IgnoreCase | RegexOptions.Singleline),
@@ -55,7 +55,7 @@ namespace Microsoft.Recognizers.Text.Number.Italian
                               RegexOptions.IgnoreCase | RegexOptions.Singleline),
                     "DoublePow"
                 }, {
-                    GenerateLongFormatNumberRegexes(LongFormatType.DoubleNumCommaDot, placeholder), "DoubleNum"
+                    GenerateLongFormatNumberRegexes(LongFormatType.DoubleNumDotComma, placeholder), "DoubleNum"
                 }
             };
 

@@ -2,6 +2,7 @@
 using System.Collections.Immutable;
 using System.Globalization;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 using Microsoft.Recognizers.Definitions.Italian;
 
@@ -9,7 +10,7 @@ namespace Microsoft.Recognizers.Text.Number.Italian
 {
     public class ItalianNumberParserConfiguration : INumberParserConfiguration
     {
-        public ItalianNumberParserConfiguration() : this(new CultureInfo(Culture.English)) { }
+        public ItalianNumberParserConfiguration() : this(new CultureInfo(Culture.Italian)) { }
 
         public ItalianNumberParserConfiguration(CultureInfo ci)
         {
@@ -26,6 +27,17 @@ namespace Microsoft.Recognizers.Text.Number.Italian
             this.WrittenGroupSeparatorTexts = NumbersDefinitions.WrittenGroupSeparatorTexts;
             this.WrittenIntegerSeparatorTexts = NumbersDefinitions.WrittenIntegerSeparatorTexts;
             this.WrittenFractionSeparatorTexts = NumbersDefinitions.WrittenFractionSeparatorTexts;
+
+            foreach (var sufix in NumbersDefinitions.SufixOrdinalDictionary)
+            {
+                foreach (var prefix in NumbersDefinitions.PrefixCardinalDictionary)
+                {
+                    if (!NumbersDefinitions.OrdinalNumberMap.ContainsKey(prefix.Key + sufix.Key))
+                    {
+                        NumbersDefinitions.OrdinalNumberMap.Add(prefix.Key + sufix.Key, prefix.Value * sufix.Value);
+                    }
+                }
+            }
 
             this.CardinalNumberMap = NumbersDefinitions.CardinalNumberMap.ToImmutableDictionary();
             this.OrdinalNumberMap = NumbersDefinitions.OrdinalNumberMap.ToImmutableDictionary();
@@ -92,26 +104,6 @@ namespace Microsoft.Recognizers.Text.Number.Italian
 
         public long ResolveCompositeNumber(string numberStr)
         {
-
-            if (numberStr.Contains("-"))
-            {
-                var numbers = numberStr.Split('-');
-                long ret = 0;
-                foreach (var number in numbers)
-                {
-                    if (OrdinalNumberMap.ContainsKey(number))
-                    {
-                        ret += OrdinalNumberMap[number];
-                    }
-                    else if (CardinalNumberMap.ContainsKey(number))
-                    {
-                        ret += CardinalNumberMap[number];
-                    }
-                }
-
-                return ret;
-            }
-
             if (this.OrdinalNumberMap.ContainsKey(numberStr))
             {
                 return this.OrdinalNumberMap[numberStr];
@@ -122,7 +114,27 @@ namespace Microsoft.Recognizers.Text.Number.Italian
                 return this.CardinalNumberMap[numberStr];
             }
 
-            return 0;
+            long value = 0;
+            long finalValue = 0;
+            var strBuilder = new StringBuilder();
+            int lastGoodChar = 0;
+            for (int i = 0; i < numberStr.Length; i++)
+            {
+                strBuilder.Append(numberStr[i]);
+                if (this.CardinalNumberMap.ContainsKey(strBuilder.ToString()) && this.CardinalNumberMap[strBuilder.ToString()] > value)
+                {
+                    lastGoodChar = i;
+                    value = this.CardinalNumberMap[strBuilder.ToString()];
+                }
+                if ((i + 1) == numberStr.Length)
+                {
+                    finalValue += value;
+                    strBuilder.Clear();
+                    i = lastGoodChar++;
+                    value = 0;
+                }
+            }
+            return finalValue;
         }
     }
 }

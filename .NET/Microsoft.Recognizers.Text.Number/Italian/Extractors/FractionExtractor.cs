@@ -29,17 +29,17 @@ namespace Microsoft.Recognizers.Text.Number.Italian
                 {
                     new Regex(NumbersDefinitions.FractionNounRegex,
                         RegexOptions.IgnoreCase | RegexOptions.Singleline)
-                    , "FracIt"
+                    , "FracIT"
                 },
                 {
                     new Regex(NumbersDefinitions.FractionNounWithArticleRegex,
                         RegexOptions.IgnoreCase | RegexOptions.Singleline)
-                    , "FracIt"
+                    , "FracIT"
                 },
                 {
                     new Regex(NumbersDefinitions.FractionPrepositionRegex,
                         RegexOptions.IgnoreCase | RegexOptions.Singleline)
-                    , "FracIt"
+                    , "FracIT"
                 },
             };
 

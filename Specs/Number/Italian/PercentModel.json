@@ -1,4 +1,17 @@
-[
+[{
+  "Input": "2/3%",
+  "NotSupportedByDesign": "python",
+  "Results": [
+    {
+      "Text": "2/3%",
+      "TypeName": "percentage",
+      "Resolution": {
+        "value": "0,666666666666667%"
+      }
+    }
+  ]
+}
+,
   {
   "Input": "venti percento",
   "NotSupportedByDesign": "python",
@@ -192,20 +205,6 @@
       "TypeName": "percentage",
       "Resolution": {
         "value": "10%"
-      }
-    }
-  ]
-}
-,
-{
-  "Input": "2/3%",
-  "NotSupportedByDesign": "python",
-  "Results": [
-    {
-      "Text": "2/3%",
-      "TypeName": "percentage",
-      "Resolution": {
-        "value": "0,666666666666667%"
       }
     }
   ]
