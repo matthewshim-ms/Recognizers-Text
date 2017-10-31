@@ -1,4 +1,19 @@
-[{
+[
+  {
+  "Input": "venti percento",
+  "NotSupportedByDesign": "python",
+  "Results": [
+    {
+      "Text": "venti percento",
+      "TypeName": "percentage",
+      "Resolution": {
+        "value": "20%"
+      }
+    }
+  ]
+}
+,
+  {
   "Input": "100%",
   "NotSupportedByDesign": "python",
   "Results": [
@@ -55,6 +70,20 @@
 }
 ,
 {
+  "Input": "un ventiuna percento",
+  "NotSupportedByDesign": "python",
+  "Results": [
+    {
+      "Text": "un ventiuna percento",
+      "TypeName": "percentage",
+      "Resolution": {
+        "value": "0,0476190476190476%"
+      }
+    }
+  ]
+}
+,
+{
   "Input": "240 percento",
   "NotSupportedByDesign": "python",
   "Results": [
@@ -68,20 +97,7 @@
   ]
 }
 ,
-{
-  "Input": "venti percento",
-  "NotSupportedByDesign": "python",
-  "Results": [
-    {
-      "Text": "venti percento",
-      "TypeName": "percentage",
-      "Resolution": {
-        "value": "20%"
-      }
-    }
-  ]
-}
-,
+
 {
   "Input": "trenta per cento",
   "NotSupportedByDesign": "python",
@@ -152,20 +168,7 @@
   ]
 }
 ,
-{
-  "Input": "per cento di ventidui",
-  "NotSupportedByDesign": "python",
-  "Results": [
-    {
-      "Text": "per cento di ventidui",
-      "TypeName": "percentage",
-      "Resolution": {
-        "value": "22%"
-      }
-    }
-  ]
-}
-,
+
 {
   "Input": "percento di 210",
   "NotSupportedByDesign": "python",
@@ -189,6 +192,48 @@
       "TypeName": "percentage",
       "Resolution": {
         "value": "10%"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "2/3%",
+  "NotSupportedByDesign": "python",
+  "Results": [
+    {
+      "Text": "2/3%",
+      "TypeName": "percentage",
+      "Resolution": {
+        "value": "0,666666666666667%"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "1 diviso 3 percento",
+  "NotSupportedByDesign": "python",
+  "Results": [
+    {
+      "Text": "1 diviso 3 percento",
+      "TypeName": "percentage",
+      "Resolution": {
+        "value": "0,333333333333333%"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "uno diviso tre percento",
+  "NotSupportedByDesign": "python",
+  "Results": [
+    {
+      "Text": "uno diviso tre percento",
+      "TypeName": "percentage",
+      "Resolution": {
+        "value": "0,333333333333333%"
       }
     }
   ]

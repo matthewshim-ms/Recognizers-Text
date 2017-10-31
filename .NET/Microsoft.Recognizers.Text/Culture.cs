@@ -9,7 +9,7 @@ namespace Microsoft.Recognizers.Text
         public const string Spanish = "es-es";
         public const string Portuguese = "pt-br";
         public const string French = "fr-fr";
-        public const string Italian = "it-it";
+        public const string Italian = "it-IT";
 
         public string CultureName;
         public string CultureCode;
