@@ -82,24 +82,42 @@ namespace Microsoft.Recognizers.Text.Number.Italian
 
         public IEnumerable<string> NormalizeTokenSet(IEnumerable<string> tokens, ParseResult context)
         {
-            var fracWords = new List<string>();
-            var tokenList = tokens.ToList();
-            var tokenLen = tokenList.Count;
+            var result = new List<string>();
 
-            for (var i = 0; i < tokenLen; i++)
+            foreach (var token in tokens)
             {
-                if ((i < tokenLen - 2) && tokenList[i + 1] == "-")
+                var tempWord = token.Trim('s');
+                if (this.OrdinalNumberMap.ContainsKey(tempWord))
                 {
-                    fracWords.Add(tokenList[i] + tokenList[i + 1] + tokenList[i + 2]);
-                    i += 2;
+                    result.Add(tempWord);
+                    continue;
                 }
-                else
+
+                if (tempWord.EndsWith("esimo") || tempWord.EndsWith("ava"))
                 {
-                    fracWords.Add(tokenList[i]);
+                    var origTempWord = tempWord;
+                    var newLength = origTempWord.Length;
+                    tempWord = origTempWord.Remove(newLength - 5);
+                    if (this.CardinalNumberMap.ContainsKey(tempWord))
+                    {
+                        result.Add(tempWord);
+                        continue;
+                    }
+                    else
+                    {
+                        tempWord = origTempWord.Remove(newLength - 2);
+                        if (this.CardinalNumberMap.ContainsKey(tempWord))
+                        {
+                            result.Add(tempWord);
+                            continue;
+                        }
+                    }
                 }
+
+                result.Add(token);
             }
 
-            return fracWords;
+            return result;
         }
 
         public long ResolveCompositeNumber(string numberStr)

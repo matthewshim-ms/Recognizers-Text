@@ -19,13 +19,13 @@ namespace Microsoft.Recognizers.Definitions.Italian
 	{
 		public const string LangMarker = "IT";
 		public const string HundredsNumberIntegerRegex = @"(trecento|quattrocento|seicento|settecento|ottocento|novecento|duecento|cinquecento)";
-		public const string RoundNumberIntegerRegex = @"(cento|mille|milione|miliardo|trilione)";
+		public const string RoundNumberIntegerRegex = @"(mille|milion[ie]|miliard[io]|trilione|cento)(\s*di)?";
 		public const string ZeroToNineIntegerRegex = @"(tre|sette|otto|quattro|cinque|zero|nove|due|dui|sei|un[ao]?)";
 		public const string TenToNineteenIntegerRegex = @"(diciassette|tredici|quattordici|diciotto|diciannove|quindici|sedici|undici|dodici|dieci)";
-		public const string TwentiesIntegerRegex = @"(ventiquattro|venticinque|ventisei|ventisette|ventotto|ventinove|ventitr[eé]|ventidu[ie]|ventiuno)";
+		public const string TwentiesIntegerRegex = @"(ventiquattro|venticinque|ventisei|ventisette|ventotto|ventinove|ventitr[eè]|ventidu[ie]|ventiuno|ventuno|venti)";
 		public const string TensNumberIntegerRegex = @"(settanta|venti|trenta|ottanta|novanta|quaranta|cinquanta|sessanta)";
 		public const string DigitsNumberRegex = @"\d|\d{1,3}(\.\d{3})";
-		public static readonly string BelowHundredsRegex = $@"(({TenToNineteenIntegerRegex}|{TwentiesIntegerRegex}|({TensNumberIntegerRegex}(\s+e\s+{ZeroToNineIntegerRegex})?))|{ZeroToNineIntegerRegex})";
+		public static readonly string BelowHundredsRegex = $@"(({TenToNineteenIntegerRegex}|{TwentiesIntegerRegex}|((\s+y\s+)?{TensNumberIntegerRegex}(\s+e\s+{ZeroToNineIntegerRegex})?))|{ZeroToNineIntegerRegex}|(\s+{ZeroToNineIntegerRegex}))";
 		public static readonly string BelowThousandsRegex = $@"({HundredsNumberIntegerRegex}(\s+{BelowHundredsRegex})?|{BelowHundredsRegex})";
 		public static readonly string SupportThousandsRegex = $@"(({BelowThousandsRegex}|{BelowHundredsRegex})\s+{RoundNumberIntegerRegex}(\s+{RoundNumberIntegerRegex})?)";
 		public static readonly string SeparaIntRegex = $@"({SupportThousandsRegex}(\s+{SupportThousandsRegex})*(\s+{BelowThousandsRegex})?|{BelowThousandsRegex})";
@@ -37,9 +37,9 @@ namespace Microsoft.Recognizers.Definitions.Italian
 		public static readonly string RoundNumberIntegerRegexWithLocks = $@"(?<=\b)({DigitsNumberRegex})+\s+{RoundNumberIntegerRegex}(?=\b)";
 		public const string NumbersWithDozenSuffix = @"(((?<!\d+\s*)-\s*)|(?<=\b))\d+\s+dozzina(e)?(?=\b)";
 		public static readonly string AllIntRegexWithLocks = $@"((?<=\b){AllIntRegex}(?=\b))";
-		public static readonly string AllIntRegexWithDozenSuffixLocks = $@"(?<=\b)(((mezzo\s+)?\s+dozzina)|({AllIntRegex}\s+(e|con)\s+)?({AllIntRegex}\s+dozinna(s)?))(?=\b)";
+		public static readonly string AllIntRegexWithDozenSuffixLocks = $@"(?<=\b)(((mezzo\s+)?\s+dozzina)|({AllIntRegex}\s+(e|con)\s+)?({AllIntRegex}\s+dozinna(s)?)|({AllIntRegex}\s+dozinna di?))(?=\b)";
 		public const string SimpleRoundOrdinalRegex = @"(millesimo|milionesimo|bilionesim[ao]|trilionesimo)";
-		public const string OneToNineOrdinalRegex = @"(primo|secondo|terz[oai]|quart[oai]|quint[oai]|sest[oai]|settim[oai]|ottavo|non[ao])";
+		public const string OneToNineOrdinalRegex = @"(primo|secondo|terz[oai]|quart[oai]|quint[oai]|sest[oai]|settim[oai]|ottav[ao]|non[ao])";
 		public const string TensOrdinalRegex = @"(diciannovesimo|diciottesimo|diciassettesimo|sedicesimo|quindicesimo|quattordicesimo|tredicesimo|ventesimo|decimo)";
 		public const string HundredOrdinalRegex = @"(centesimo|duecentesimo|trecentesimo|quattrocentesimo|cinquecentesimo|seicentesimo|settecentesimo|ottocentesimo|novecentesimo)";
 		public const string SpecialUnderHundredOrdinalRegex = @"(undicesimo|dodicesimo)";
@@ -59,7 +59,7 @@ namespace Microsoft.Recognizers.Definitions.Italian
 		public static readonly string FractionNounWithArticleRegex = $@"(?<=\b)({AllIntRegex}\s+(e\s+)?)?(un|un[oa])(\s+)(({AllOrdinalRegex})|({SufixRoundOrdinalRegex})|(e\s+)?mezzo?)(?=\b)";
 		public static readonly string FractionPrepositionRegex = $@"(?<=\b)(({AllIntRegex})|((?<!\.)\d+))\s+diviso\s+(({AllIntRegex})|((\d+)(?!\.)))(?=\b)";
 		public static readonly string AllPointRegex = $@"((\s+{ZeroToNineIntegerRegex})+|(\s+{SeparaIntRegex}))";
-		public static readonly string AllFloatRegex = $@"{AllIntRegex}(\s+punto|coma|con){AllPointRegex}";
+		public static readonly string AllFloatRegex = $@"{AllIntRegex}(\s+punto|coma|con|e){AllPointRegex}";
 		public const string DoubleWithMultiplierRegex = @"(((?<!\d+\s*)-\s*)|((?<=\b)(?<!\d+\,)))\d+,\d+\s*(K|k|M|G|T)(?=\b)";
 		public const string DoubleExponentialNotationRegex = @"(((?<!\d+\s*)-\s*)|((?<=\b)(?<!\d+,)))(\d+(,\d+)?)e([+-]*[1-9]\d*)(?=\b)";
 		public const string DoubleCaretExponentialNotationRegex = @"(((?<!\d+\s*)-\s*)|((?<=\b)(?<!\d+,)))(\d+(,\d+)?)\^([+-]*[1-9]\d*)(?=\b)";
@@ -78,9 +78,9 @@ namespace Microsoft.Recognizers.Definitions.Italian
 		public static readonly string[] WrittenDecimalSeparatorTexts = { "punto" };
 		public static readonly string[] WrittenGroupSeparatorTexts = { "punto" };
 		public static readonly string[] WrittenIntegerSeparatorTexts = { "e" };
-		public static readonly string[] WrittenFractionSeparatorTexts = { "e" };
+		public static readonly string[] WrittenFractionSeparatorTexts = { "con" };
 		public const string HalfADozenRegex = @"mezzo\s+dozzina";
-		public const string DigitalNumberRegex = @"((?<=\b)(cento|mille|milione|miliardo|trilione|dozzina(e)?)(?=\b))|((?<=(\d|\b))(k|t|m|g|b)(?=\b))";
+		public const string DigitalNumberRegex = @"((?<=\b)(mille|milion[ie]|miliardo|trilione|dozzina|cento)(?=\b))|((?<=(\d|\b))(k|t|m|g|b)(?=\b))";
 		public static readonly Dictionary<string, long> CardinalNumberMap = new Dictionary<string, long>
 		{
 			{ "un", 1 },
@@ -101,6 +101,7 @@ namespace Microsoft.Recognizers.Definitions.Italian
 			{ "dodici", 12 },
 			{ "dozzina", 12 },
 			{ "dozzine", 12 },
+			{ "dozinna di", 12 },
 			{ "tredici", 13 },
 			{ "quattordici", 14 },
 			{ "quiundici", 15 },
@@ -109,11 +110,12 @@ namespace Microsoft.Recognizers.Definitions.Italian
 			{ "diciotto", 18 },
 			{ "diciannove", 19 },
 			{ "venti", 20 },
+			{ "ventun", 21 },
 			{ "ventuno", 21 },
 			{ "ventidui", 22 },
 			{ "ventidue", 22 },
 			{ "ventitre", 23 },
-			{ "ventitré", 23 },
+			{ "ventitrè", 23 },
 			{ "ventiquattro", 24 },
 			{ "venticinque", 25 },
 			{ "ventisei", 26 },
@@ -137,7 +139,9 @@ namespace Microsoft.Recognizers.Definitions.Italian
 			{ "cento", 100 },
 			{ "mille", 1000 },
 			{ "milione", 1000000 },
+			{ "milioni", 1000000 },
 			{ "miliardo", 1000000000 },
+			{ "miliardi", 1000000000 },
 			{ "trilioni di", 1000000000000 },
 			{ "trilioni", 1000000000000 }
 		};
@@ -152,10 +156,12 @@ namespace Microsoft.Recognizers.Definitions.Italian
 			{ "terzo", 3 },
 			{ "terza", 3 },
 			{ "quarto", 4 },
+			{ "trimestre", 4 },
 			{ "quinto", 5 },
 			{ "quinta", 5 },
 			{ "sesto", 6 },
 			{ "settimo", 7 },
+			{ "settesimo", 7 },
 			{ "ottavo", 8 },
 			{ "nono", 9 },
 			{ "nona", 9 },
@@ -295,11 +301,13 @@ namespace Microsoft.Recognizers.Definitions.Italian
 		};
 		public static readonly Dictionary<string, long> RoundNumberMap = new Dictionary<string, long>
 		{
-			{ "centinaio", 100 },
 			{ "cento", 100 },
+			{ "centinaio", 100 },
 			{ "mille", 1000 },
 			{ "milione", 1000000 },
+			{ "milioni", 1000000 },
 			{ "miliardo", 1000000000 },
+			{ "miliardi", 1000000000 },
 			{ "bilione", 1000000000 },
 			{ "trilioni di", 1000000000000 },
 			{ "trilioni", 1000000000000 },
@@ -317,6 +325,7 @@ namespace Microsoft.Recognizers.Definitions.Italian
 			{ "trillionths", 1000000000000 },
 			{ "dozzina", 12 },
 			{ "dozzine", 12 },
+			{ "dozzina di", 12 },
 			{ "decine", 12 },
 			{ "k", 1000 },
 			{ "m", 1000000 },

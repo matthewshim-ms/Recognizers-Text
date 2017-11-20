@@ -55,11 +55,11 @@
 }
 ,
 {
-  "Input": "quaranta settima",
+  "Input": "quarantasettesimo",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "quaranta settima",
+      "Text": "quarantasettesimo",
       "TypeName": "ordinal",
       "Resolution": {
         "value": "47"
@@ -125,11 +125,11 @@
 }
 ,
 {
-  "Input": "tresmillonesimo septimo",
+  "Input": "tresmilionesimo settimo",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "tresmillonesimo septimo",
+      "Text": "tresmilionesimo settimo",
       "TypeName": "ordinal",
       "Resolution": {
         "value": "3000007"
@@ -335,11 +335,11 @@
 }
 ,
 {
-  "Input": "quinientosmillonesimo",
+  "Input": "cinquecentomilionesimo",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "quinientosmillonesimo",
+      "Text": "cinquecentomilionesimo",
       "TypeName": "ordinal",
       "Resolution": {
         "value": "500000000"
@@ -713,11 +713,11 @@
 }
 ,
 {
-  "Input": "2da",
+  "Input": "2°",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "2da",
+      "Text": "2°",
       "TypeName": "ordinal",
       "Resolution": {
         "value": "2"
@@ -769,11 +769,11 @@
 }
 ,
 {
-  "Input": "vigesimo",
+  "Input": "ventesimo",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "vigesimo",
+      "Text": "ventesimo",
       "TypeName": "ordinal",
       "Resolution": {
         "value": "20"
@@ -825,11 +825,11 @@
 }
 ,
 {
-  "Input": "cien billonesimo",
+  "Input": "cento bilionesimo",
   "NotSupportedByDesign": "python",
   "Results": [
     {
-      "Text": "cien billonesimo",
+      "Text": "cento bilionesimo",
       "TypeName": "ordinal",
       "Resolution": {
         "value": "100000000000000"

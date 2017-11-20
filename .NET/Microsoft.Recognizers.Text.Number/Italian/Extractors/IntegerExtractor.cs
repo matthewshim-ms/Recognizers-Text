@@ -47,7 +47,7 @@ namespace Microsoft.Recognizers.Text.Number.Italian
                     new Regex(NumbersDefinitions.AllIntRegexWithDozenSuffixLocks,
                               RegexOptions.IgnoreCase | RegexOptions.Singleline), "IntegerIT"
                 }, {
-                    GenerateLongFormatNumberRegexes(LongFormatType.IntegerNumComma, placeholder), "IntegerNum"
+                    GenerateLongFormatNumberRegexes(LongFormatType.IntegerNumDot, placeholder), "IntegerNum"
                 }
             };
 
