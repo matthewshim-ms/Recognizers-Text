@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using Microsoft.Recognizers.Text.Number.French;
-using Microsoft.Recognizers.Definitions.French;
 
+using Microsoft.Recognizers.Definitions.French;
+using Microsoft.Recognizers.Text.Number;
 
 namespace Microsoft.Recognizers.Text.DateTime.French
 {
@@ -157,7 +157,7 @@ namespace Microsoft.Recognizers.Text.DateTime.French
                 DateTimeDefinitions.MonthOfRegex,
                 RegexOptions.IgnoreCase | RegexOptions.Singleline);
 
-        //TODO: add this two regex
+        //TODO: add regexs below
         public static readonly Regex RangeUnitRegex =
             new Regex(
                 DateTimeDefinitions.RangeUnitRegex,
@@ -170,6 +170,12 @@ namespace Microsoft.Recognizers.Text.DateTime.French
 
         public static readonly Regex RestOfDateRegex =
             new Regex(DateTimeDefinitions.RestOfDateRegex, RegexOptions.IgnoreCase | RegexOptions.Singleline);
+
+        public static readonly Regex LaterEarlyPeriodRegex =
+            new Regex(DateTimeDefinitions.LaterEarlyPeriodRegex, RegexOptions.IgnoreCase | RegexOptions.Singleline);
+
+        public static readonly Regex WeekWithWeekDayRangeRegex =
+            new Regex(DateTimeDefinitions.WeekWithWeekDayRangeRegex, RegexOptions.IgnoreCase | RegexOptions.Singleline);
 
         private static readonly Regex FromRegex = new Regex(DateTimeDefinitions.FromRegex, RegexOptions.IgnoreCase | RegexOptions.Singleline);
         private static readonly Regex ConnectorAndRegex = new Regex(DateTimeDefinitions.ConnectorAndRegex, RegexOptions.IgnoreCase | RegexOptions.Singleline);
@@ -194,6 +200,8 @@ namespace Microsoft.Recognizers.Text.DateTime.French
             PastPrefixRegex,
             NextPrefixRegex,
             ThisPrefexRegex,
+            LaterEarlyPeriodRegex,
+            WeekWithWeekDayRangeRegex,
         };
 
         public FrenchDatePeriodExtractorConfiguration()
@@ -203,11 +211,11 @@ namespace Microsoft.Recognizers.Text.DateTime.French
             DurationExtractor = new BaseDurationExtractor(new FrenchDurationExtractorConfiguration());
         }
 
-        public IExtractor DatePointExtractor { get; }
+        public IDateTimeExtractor DatePointExtractor { get; }
 
         public IExtractor CardinalExtractor { get; }
 
-        public IExtractor DurationExtractor { get; }
+        public IDateTimeExtractor DurationExtractor { get; }
 
         IEnumerable<Regex> IDatePeriodExtractorConfiguration.SimpleCasesRegexes => SimpleCasesRegexes;
 

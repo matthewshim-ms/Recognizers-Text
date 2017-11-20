@@ -1,5 +1,8 @@
 ﻿using System.Text.RegularExpressions;
+
 using Microsoft.Recognizers.Definitions.French;
+using System.Collections.Generic;
+using Microsoft.Recognizers.Text.Number;
 
 namespace Microsoft.Recognizers.Text.DateTime.French
 {
@@ -27,23 +30,28 @@ namespace Microsoft.Recognizers.Text.DateTime.French
             new Regex(DateTimeDefinitions.NumberEndingPattern,
                 RegexOptions.IgnoreCase | RegexOptions.Singleline);
 
-        public IExtractor DateExtractor { get; }
+        public static readonly Regex[] FilterWordRegexList =
+        {
 
-        public IExtractor TimeExtractor { get; }
+        };
 
-        public IExtractor DateTimeExtractor { get; }
+        public IDateTimeExtractor DateExtractor { get; }
 
-        public IExtractor DatePeriodExtractor { get; }
+        public IDateTimeExtractor TimeExtractor { get; }
 
-        public IExtractor TimePeriodExtractor { get; }
+        public IDateTimeExtractor DateTimeExtractor { get; }
 
-        public IExtractor DateTimePeriodExtractor { get; }
+        public IDateTimeExtractor DatePeriodExtractor { get; }
 
-        public IExtractor DurationExtractor { get; }
+        public IDateTimeExtractor TimePeriodExtractor { get; }
 
-        public IExtractor SetExtractor { get; }
+        public IDateTimeExtractor DateTimePeriodExtractor { get; }
 
-        public IExtractor HolidayExtractor { get; }
+        public IDateTimeExtractor DurationExtractor { get; }
+
+        public IDateTimeExtractor SetExtractor { get; }
+
+        public IDateTimeExtractor HolidayExtractor { get; }
 
         public IExtractor IntegerExtractor { get; }
 
@@ -68,5 +76,6 @@ namespace Microsoft.Recognizers.Text.DateTime.French
         Regex IMergedExtractorConfiguration.SingleAmbiguousMonthRegex => SingleAmbiguousMonthRegex;
         Regex IMergedExtractorConfiguration.PrepositionSuffixRegex => PrepositionSuffixRegex;
         Regex IMergedExtractorConfiguration.NumberEndingPattern => NumberEndingPattern;
+        IEnumerable<Regex> IMergedExtractorConfiguration.FilterWordRegexList => FilterWordRegexList;
     }
 }

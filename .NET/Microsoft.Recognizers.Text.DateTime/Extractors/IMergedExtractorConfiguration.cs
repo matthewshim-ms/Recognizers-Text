@@ -1,28 +1,33 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Collections.Generic;
+using System.Text.RegularExpressions;
+
+using Microsoft.Recognizers.Text.Number;
 
 namespace Microsoft.Recognizers.Text.DateTime
 {
     public interface IMergedExtractorConfiguration
     {
-        IExtractor DateExtractor { get; }
+        IDateTimeExtractor DateExtractor { get; }
 
-        IExtractor TimeExtractor { get; }
+        IDateTimeExtractor TimeExtractor { get; }
 
-        IExtractor DateTimeExtractor { get; }
+        IDateTimeExtractor DateTimeExtractor { get; }
 
-        IExtractor DatePeriodExtractor { get; }
+        IDateTimeExtractor DatePeriodExtractor { get; }
 
-        IExtractor TimePeriodExtractor { get; }
+        IDateTimeExtractor TimePeriodExtractor { get; }
 
-        IExtractor DateTimePeriodExtractor { get; }
+        IDateTimeExtractor DateTimePeriodExtractor { get; }
 
-        IExtractor DurationExtractor { get; }
+        IDateTimeExtractor DurationExtractor { get; }
 
-        IExtractor SetExtractor { get; }
+        IDateTimeExtractor SetExtractor { get; }
 
-        IExtractor HolidayExtractor { get; }
+        IDateTimeExtractor HolidayExtractor { get; }
 
         IExtractor IntegerExtractor { get; }
+
+        IEnumerable<Regex> FilterWordRegexList { get; }
 
         Regex AfterRegex { get; }
 

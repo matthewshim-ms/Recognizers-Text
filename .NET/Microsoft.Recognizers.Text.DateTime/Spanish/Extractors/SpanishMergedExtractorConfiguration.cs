@@ -1,5 +1,8 @@
 ﻿using System.Text.RegularExpressions;
+
 using Microsoft.Recognizers.Definitions.Spanish;
+using System.Collections.Generic;
+using Microsoft.Recognizers.Text.Number;
 
 namespace Microsoft.Recognizers.Text.DateTime.Spanish
 {
@@ -23,23 +26,27 @@ namespace Microsoft.Recognizers.Text.DateTime.Spanish
 
         public static readonly Regex NumberEndingPattern = new Regex(DateTimeDefinitions.NumberEndingPattern, RegexOptions.IgnoreCase | RegexOptions.Singleline);
 
-        public IExtractor DateExtractor { get; }
+        public static readonly Regex[] FilterWordRegexList =
+        {
+        };
 
-        public IExtractor TimeExtractor { get; }
+        public IDateTimeExtractor DateExtractor { get; }
 
-        public IExtractor DateTimeExtractor { get; }
+        public IDateTimeExtractor TimeExtractor { get; }
 
-        public IExtractor DatePeriodExtractor { get; }
+        public IDateTimeExtractor DateTimeExtractor { get; }
 
-        public IExtractor TimePeriodExtractor { get; }
+        public IDateTimeExtractor DatePeriodExtractor { get; }
 
-        public IExtractor DateTimePeriodExtractor { get; }
+        public IDateTimeExtractor TimePeriodExtractor { get; }
 
-        public IExtractor DurationExtractor { get; }
+        public IDateTimeExtractor DateTimePeriodExtractor { get; }
 
-        public IExtractor SetExtractor { get; }
+        public IDateTimeExtractor DurationExtractor { get; }
 
-        public IExtractor HolidayExtractor { get; }
+        public IDateTimeExtractor SetExtractor { get; }
+
+        public IDateTimeExtractor HolidayExtractor { get; }
 
         public IExtractor IntegerExtractor { get; }
 
@@ -64,5 +71,6 @@ namespace Microsoft.Recognizers.Text.DateTime.Spanish
         Regex IMergedExtractorConfiguration.SingleAmbiguousMonthRegex => SingleAmbiguousMonthRegex;
         Regex IMergedExtractorConfiguration.PrepositionSuffixRegex => PrepositionSuffixRegex;
         Regex IMergedExtractorConfiguration.NumberEndingPattern => NumberEndingPattern;
+        IEnumerable<Regex> IMergedExtractorConfiguration.FilterWordRegexList => FilterWordRegexList;
     }
 }
