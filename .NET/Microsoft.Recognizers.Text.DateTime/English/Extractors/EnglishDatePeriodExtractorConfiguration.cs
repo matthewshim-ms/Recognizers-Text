@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+
 using Microsoft.Recognizers.Definitions.English;
+using Microsoft.Recognizers.Text.Number;
 
 namespace Microsoft.Recognizers.Text.DateTime.English
 {
@@ -105,6 +107,12 @@ namespace Microsoft.Recognizers.Text.DateTime.English
         public static readonly Regex RestOfDateRegex =
             new Regex(DateTimeDefinitions.RestOfDateRegex, RegexOptions.IgnoreCase | RegexOptions.Singleline);
 
+        public static readonly Regex LaterEarlyPeriodRegex =
+            new Regex(DateTimeDefinitions.LaterEarlyPeriodRegex, RegexOptions.IgnoreCase | RegexOptions.Singleline);
+
+        public static readonly Regex WeekWithWeekDayRangeRegex =
+            new Regex(DateTimeDefinitions.WeekWithWeekDayRangeRegex, RegexOptions.IgnoreCase | RegexOptions.Singleline);
+
         private static readonly Regex[] SimpleCasesRegexes =
         {
             SimpleCasesRegex,
@@ -121,7 +129,9 @@ namespace Microsoft.Recognizers.Text.DateTime.English
             QuarterRegexYearFront,
             SeasonRegex,
             WhichWeekRegex,
-            RestOfDateRegex
+            RestOfDateRegex,
+            LaterEarlyPeriodRegex,
+            WeekWithWeekDayRangeRegex,
         };
 
         public EnglishDatePeriodExtractorConfiguration()
@@ -131,11 +141,11 @@ namespace Microsoft.Recognizers.Text.DateTime.English
             DurationExtractor = new BaseDurationExtractor(new EnglishDurationExtractorConfiguration());
         }
 
-        public IExtractor DatePointExtractor { get; }
+        public IDateTimeExtractor DatePointExtractor { get; }
 
         public IExtractor CardinalExtractor { get; }
 
-        public IExtractor DurationExtractor { get; }
+        public IDateTimeExtractor DurationExtractor { get; }
 
         IEnumerable<Regex> IDatePeriodExtractorConfiguration.SimpleCasesRegexes => SimpleCasesRegexes;
 

@@ -1,20 +1,28 @@
 ﻿using System.Collections.Immutable;
 using System.Text.RegularExpressions;
+
 using Microsoft.Recognizers.Text.DateTime.Utilities;
+using Microsoft.Recognizers.Text.Number;
 
 namespace Microsoft.Recognizers.Text.DateTime.English
 {
     public class EnglishTimePeriodParserConfiguration : ITimePeriodParserConfiguration
     {
-        public IExtractor TimeExtractor { get; }
+        public IDateTimeExtractor TimeExtractor { get; }
 
         public IDateTimeParser TimeParser { get; }
+
+        public IExtractor IntegerExtractor { get; }
 
         public Regex PureNumberFromToRegex { get; }
 
         public Regex PureNumberBetweenAndRegex { get; }
 
         public Regex TimeOfDayRegex { get; }
+
+        public Regex GeneralEndingRegex { get; }
+
+        public Regex TillRegex { get; }
 
         public IImmutableDictionary<string, int> Numbers { get; }
 
@@ -23,10 +31,13 @@ namespace Microsoft.Recognizers.Text.DateTime.English
         public EnglishTimePeriodParserConfiguration(ICommonDateTimeParserConfiguration config)
         {
             TimeExtractor = config.TimeExtractor;
+            IntegerExtractor = config.IntegerExtractor;
             TimeParser = config.TimeParser;
             PureNumberFromToRegex = EnglishTimePeriodExtractorConfiguration.PureNumFromTo;
             PureNumberBetweenAndRegex = EnglishTimePeriodExtractorConfiguration.PureNumBetweenAnd;
             TimeOfDayRegex = EnglishTimePeriodExtractorConfiguration.TimeOfDayRegex;
+            GeneralEndingRegex = EnglishTimePeriodExtractorConfiguration.GeneralEndingRegex;
+            TillRegex = EnglishTimePeriodExtractorConfiguration.TillRegex;
             Numbers = config.Numbers;
             UtilityConfiguration = config.UtilityConfiguration;
         }

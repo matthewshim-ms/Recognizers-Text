@@ -1,6 +1,8 @@
 ﻿using System.Collections.Immutable;
 using System.Text.RegularExpressions;
+
 using Microsoft.Recognizers.Definitions.French;
+using Microsoft.Recognizers.Text.Number;
 
 namespace Microsoft.Recognizers.Text.DateTime.French
 {
@@ -8,13 +10,13 @@ namespace Microsoft.Recognizers.Text.DateTime.French
     {
         public string TokenBeforeDate { get; }
 
-        #region internalsParsers
+        #region internalParsers
 
-        public IExtractor DateExtractor { get; }
+        public IDateTimeExtractor DateExtractor { get; }
 
         public IExtractor CardinalExtractor { get; }
 
-        public IExtractor DurationExtractor { get; }
+        public IDateTimeExtractor DurationExtractor { get; }
 
         public IParser NumberParser { get; }
 
@@ -47,6 +49,8 @@ namespace Microsoft.Recognizers.Text.DateTime.French
         public Regex MonthOfRegex { get; }
         public Regex InConnectorRegex { get; }
         public Regex RestOfDateRegex { get; }
+        public Regex LaterEarlyPeriodRegex { get; }
+        public Regex WeekWithWeekDayRangeRegex { get; }
 
         public static readonly Regex NextPrefixRegex =
             new Regex(
@@ -111,6 +115,8 @@ namespace Microsoft.Recognizers.Text.DateTime.French
             WeekOfRegex = FrenchDatePeriodExtractorConfiguration.WeekOfRegex;
             MonthOfRegex = FrenchDatePeriodExtractorConfiguration.MonthOfRegex;
             RestOfDateRegex = FrenchDatePeriodExtractorConfiguration.RestOfDateRegex;
+            LaterEarlyPeriodRegex = FrenchDatePeriodExtractorConfiguration.LaterEarlyPeriodRegex;
+            WeekWithWeekDayRangeRegex = FrenchDatePeriodExtractorConfiguration.WeekWithWeekDayRangeRegex;
             InConnectorRegex = config.UtilityConfiguration.InConnectorRegex;
             UnitMap = config.UnitMap;
             CardinalMap = config.CardinalMap;

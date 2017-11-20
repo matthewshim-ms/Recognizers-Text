@@ -1,0 +1,16 @@
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.NumberWithUnit.Tests\bin\Debug\Microsoft.Recognizers.Text.NumberWithUnit.Tests.dll
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.NumberWithUnit.Tests\bin\Debug\Microsoft.Recognizers.Text.NumberWithUnit.Tests.pdb
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.NumberWithUnit.Tests\bin\Debug\Microsoft.Recognizers.Text.dll
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.NumberWithUnit.Tests\bin\Debug\Microsoft.Recognizers.Text.Number.dll
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.NumberWithUnit.Tests\bin\Debug\Microsoft.Recognizers.Text.NumberWithUnit.dll
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.NumberWithUnit.Tests\bin\Debug\System.Collections.Immutable.dll
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.NumberWithUnit.Tests\bin\Debug\Microsoft.Recognizers.Definitions.dll
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.NumberWithUnit.Tests\bin\Debug\Microsoft.Recognizers.Text.NumberWithUnit.pdb
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.NumberWithUnit.Tests\bin\Debug\Microsoft.Recognizers.Text.Number.pdb
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.NumberWithUnit.Tests\bin\Debug\Microsoft.Recognizers.Text.pdb
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.NumberWithUnit.Tests\bin\Debug\System.Collections.Immutable.xml
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.NumberWithUnit.Tests\bin\Debug\Microsoft.Recognizers.Definitions.pdb
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.NumberWithUnit.Tests\obj\Debug\Microsoft.Recognizers.Text.NumberWithUnit.Tests.csprojResolveAssemblyReference.cache
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.NumberWithUnit.Tests\obj\Debug\Microsoft.Recognizers.Text.NumberWithUnit.Tests.csproj.CoreCompileInputs.cache
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.NumberWithUnit.Tests\obj\Debug\Microsoft.Recognizers.Text.NumberWithUnit.Tests.dll
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.NumberWithUnit.Tests\obj\Debug\Microsoft.Recognizers.Text.NumberWithUnit.Tests.pdb

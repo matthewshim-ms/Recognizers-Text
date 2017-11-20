@@ -1,0 +1,6 @@
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text\bin\Debug\Microsoft.Recognizers.Text.dll
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text\bin\Debug\Microsoft.Recognizers.Text.pdb
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text\obj\Debug\Microsoft.Recognizers.Text.csprojResolveAssemblyReference.cache
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text\obj\Debug\Microsoft.Recognizers.Text.csproj.CoreCompileInputs.cache
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text\obj\Debug\Microsoft.Recognizers.Text.dll
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text\obj\Debug\Microsoft.Recognizers.Text.pdb

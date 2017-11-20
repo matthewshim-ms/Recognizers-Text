@@ -1,19 +1,21 @@
 ﻿using System.Collections.Immutable;
 using System.Text.RegularExpressions;
 
+using Microsoft.Recognizers.Text.Number;
+
 namespace Microsoft.Recognizers.Text.DateTime
 {
     public interface IDatePeriodParserConfiguration
     {
         string TokenBeforeDate { get; }
 
-        IExtractor DateExtractor { get; }
+        IDateTimeExtractor DateExtractor { get; }
 
         IExtractor CardinalExtractor { get; }
 
         IParser NumberParser { get; }
 
-        IExtractor DurationExtractor { get; }
+        IDateTimeExtractor DurationExtractor { get; }
 
         IDateTimeParser DurationParser { get; }
 
@@ -66,6 +68,10 @@ namespace Microsoft.Recognizers.Text.DateTime
         Regex ThisPrefixRegex { get; }
 
         Regex RestOfDateRegex { get; }
+
+        Regex LaterEarlyPeriodRegex { get; }
+
+        Regex WeekWithWeekDayRangeRegex { get; }
 
         IImmutableDictionary<string, string> UnitMap { get; }
 

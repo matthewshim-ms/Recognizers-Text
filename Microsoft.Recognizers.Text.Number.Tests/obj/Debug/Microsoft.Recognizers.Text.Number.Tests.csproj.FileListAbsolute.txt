@@ -1,0 +1,14 @@
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.Number.Tests\bin\Debug\Microsoft.Recognizers.Text.Number.Tests.dll
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.Number.Tests\bin\Debug\Microsoft.Recognizers.Text.Number.Tests.pdb
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.Number.Tests\bin\Debug\Microsoft.Recognizers.Text.dll
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.Number.Tests\bin\Debug\Microsoft.Recognizers.Text.Number.dll
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.Number.Tests\bin\Debug\System.Collections.Immutable.dll
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.Number.Tests\bin\Debug\Microsoft.Recognizers.Definitions.dll
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.Number.Tests\bin\Debug\Microsoft.Recognizers.Text.Number.pdb
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.Number.Tests\bin\Debug\Microsoft.Recognizers.Text.pdb
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.Number.Tests\bin\Debug\System.Collections.Immutable.xml
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.Number.Tests\bin\Debug\Microsoft.Recognizers.Definitions.pdb
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.Number.Tests\obj\Debug\Microsoft.Recognizers.Text.Number.Tests.csprojResolveAssemblyReference.cache
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.Number.Tests\obj\Debug\Microsoft.Recognizers.Text.Number.Tests.csproj.CoreCompileInputs.cache
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.Number.Tests\obj\Debug\Microsoft.Recognizers.Text.Number.Tests.dll
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Text.Number.Tests\obj\Debug\Microsoft.Recognizers.Text.Number.Tests.pdb

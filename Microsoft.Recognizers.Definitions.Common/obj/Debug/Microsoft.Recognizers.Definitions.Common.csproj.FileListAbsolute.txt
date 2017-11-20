@@ -1,0 +1,8 @@
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Definitions.Common\bin\Debug\Microsoft.Recognizers.Definitions.Common.dll
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Definitions.Common\bin\Debug\Microsoft.Recognizers.Definitions.Common.pdb
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Definitions.Common\bin\Debug\YamlDotNet.dll
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Definitions.Common\bin\Debug\YamlDotNet.xml
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Definitions.Common\obj\Debug\Microsoft.Recognizers.Definitions.Common.csprojResolveAssemblyReference.cache
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Definitions.Common\obj\Debug\Microsoft.Recognizers.Definitions.Common.csproj.CoreCompileInputs.cache
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Definitions.Common\obj\Debug\Microsoft.Recognizers.Definitions.Common.dll
+C:\Users\v-shimma\Desktop\MS-Repos\Recognizers-Text\Microsoft.Recognizers.Definitions.Common\obj\Debug\Microsoft.Recognizers.Definitions.Common.pdb
